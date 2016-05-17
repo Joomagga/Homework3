@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title> Web Calculator </title>
+		<script language = 'javascript'>
+			function btClick(i)
+			{
+				Android.buttonPressed(i)
+				document.getElementById('num').value=Android.getNum();
+			}
+
+			function send(i)
+			{
+				Android.sendMsg(document.getElementById('msg').value);
+			}
+		</script>
+	</head>
+
+	<body>
+		<form style="vertical-align:middle">
+			<input type="button" value="1" onclick="btClick(1)" style="width:32%; height:15%;">
+			<input type="button" value="2" onclick="btClick(2)" style="width:32%; height:15%;">
+			<input type="button" value="3" onclick="btClick(3)" style="width:32%; height:15%;">
+		</form>
+		<form style="vertical-align:middle">
+			<input type="button" value="4" onclick="btClick(4)" style="width:32%; height:15%;">
+			<input type="button" value="5" onclick="btClick(5)" style="width:32%; height:15%;">
+			<input type="button" value="6" onclick="btClick(6)" style="width:32%; height:15%;">
+		</form>
+		<form style="vertical-align:middle">
+			<input type="button" value="7" onclick="btClick(7)" style="width:32%; height:15%;">
+			<input type="button" value="8" onclick="btClick(8)" style="width:32%; height:15%;">
+			<input type="button" value="9" onclick="btClick(9)" style="width:32%; height:15%;">
+		</form>
+		<form style="vertical-align:middle">
+			<input type="button" value="*" onclick="btClick(*)" style="width:32%; height:15%;">
+			<input type="button" value="0" onclick="btClick(0)" style="width:32%; height:15%;">
+			<input type="button" value="#" onclick="btClick(#)" style="width:32%; height:15%;">
+		</form>
+		<form style="vertical-align:middle">
+			<p>
+				Phone Number:
+				<input type="text" id="num" style="width:55%; height:10%">
+			</p>
+		</form>
+		<form style="vertical-align:middle">
+			<input type="text" id="msg" style="width:70%; height:10%">
+			<input type="button" value="send" onclick="send()" style="width:25%; height:10%">
+		</form>
+	</body>
+</html>
